@@ -1,12 +1,17 @@
 {
-    "name": "joedaigle/wp-referrals",
+    "name": "keibs/wp-theme",
     "description": "A referral swap-selling system for businesses.",
     "version": "1.0.0beta",
     "type": "wordpress-core",
     "homepage": "unpublished",
     "time": "2017-01-21",
-    "license": "MIT",
+    "license": "All Rights Reserved",
     "authors": [
+        {
+            "name": "Yacouba Keita",
+            "email": "",
+            "role": "Developer"
+        },
         {
             "name": "Joe Daigle",
             "email": "josephldaigle@yahoo.com",
@@ -14,8 +19,9 @@
         }
     ],
     "require": {
-	"johpbloch/wordpress-core-installer": ^1.0
+        "johpbloch/wordpress-core-installer": "^1.0"
     },
     "require-dev": {
-	"phpunit/phpunit": ^6.5
-    },
+        "phpunit/phpunit": "^6.5"
+    }
+}
