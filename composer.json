@@ -1,15 +1,14 @@
 {
     "name": "keibs/wp-theme",
     "description": "A referral swap-selling system for businesses.",
-    "version": "1.0.0beta",
+    "version": "1.0.0-beta",
     "type": "wordpress-core",
-    "homepage": "unpublished",
     "time": "2017-01-21",
     "license": "All Rights Reserved",
     "authors": [
         {
             "name": "Yacouba Keita",
-            "email": "",
+            "email": "info@keibs.com",
             "role": "Developer"
         },
         {
@@ -19,9 +18,13 @@
         }
     ],
     "require": {
-        "johpbloch/wordpress-core-installer": "^1.0"
+        "johnpbloch/wordpress-core-installer": "^1.0",
+        "johnpbloch/wordpress": "^4.2"
     },
     "require-dev": {
         "phpunit/phpunit": "^6.5"
+    },
+    "extra": {
+        "wordpress-install-dir": "wp"
     }
 }
