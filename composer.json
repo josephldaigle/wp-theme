@@ -18,8 +18,11 @@
         }
     ],
     "require": {
+        "php": "^7.1.3",
         "johnpbloch/wordpress-core-installer": "^1.0",
-        "johnpbloch/wordpress": "^4.2"
+        "johnpbloch/wordpress": "^4.2",
+        "wp-cli/wp-cli": "~0.22",
+        "symfony/var-dumper": "~4.0"
     },
     "require-dev": {
         "phpunit/phpunit": "^6.5"
