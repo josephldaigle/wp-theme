@@ -1,8 +1,8 @@
 language: php
 php:
     - '7.1.3'
-    - hhvm-3.18
+    - hhvm
     - hhvm-nightly
 before_script:
   - composer self-update
-  - composer install --prefer-source --no-interaction --dev
+  - composer install --prefer-source --no-interaction
