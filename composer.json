@@ -18,6 +18,7 @@
         }
     ],
     "require": {
+        "php": ">=7.1",
         "johnpbloch/wordpress-core-installer": "^1.0",
         "johnpbloch/wordpress": "^4.2",
         "wp-cli/wp-cli": "~0.22",
