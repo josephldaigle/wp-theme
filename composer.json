@@ -28,7 +28,7 @@
         "phpunit/phpunit": "^6.5"
     },
     "extra": {
-        "wordpress-install-dir": "/var/app/wp"
+        "wordpress-install-dir": "../wp"
     },
     "installer-paths": {
         "/var/app/wp/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
