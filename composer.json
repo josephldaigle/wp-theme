@@ -28,11 +28,11 @@
         "phpunit/phpunit": "^6.5"
     },
     "extra": {
-        "wordpress-install-dir": "wp"
+        "wordpress-install-dir": "/var/app/wp"
     },
     "installer-paths": {
-        "public/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-        "public/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
-        "public/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+        "/var/app/wp/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+        "/var/app/wp/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+        "/var/app/wp/wp-content/themes/{$name}/": ["type:wordpress-theme"]
     }
 }
