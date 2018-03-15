@@ -1,11 +1,17 @@
 language: php
 php:
     - '7.1.3'
+services:
+    - mysql
 env:
-    - RDS_HOSTNAME=aawdj89riqlo09.ca3elwu0ncdl.us-east-1.rds.amazonaws.com RDS_DB_NAME=ebdb RDS_PASSWORD="T7cGyTdY054bu4y*" RDS_USERNAME=joedaigle RDS_PORT=3306
+    - RDS_HOSTNAME=localhost RDS_DB_NAME=ebdb RDS_PASSWORD="" RDS_USERNAME=root RDS_PORT=""
+before_install:
+    - mysql -e 'CREATE DATABASE IF NOT EXISTS ebdb;'
+    - mysql -e 'GRANT ALL ON ebdb.* TO `travis`@`localhost`; FLUSH PRIVILEGES;'
 before_script:
     - composer self-update
     - composer install --prefer-source --no-interaction
+    - mysql -u
 after_script:
     - sudo mv wp-config.php wp/
     - vendor/bin/wp core install --path='wp' --url=http://wptheme-env.gdyysacpvg.us-east-1.elasticbeanstalk.com/ --title="WP Theme" --admin_user=webmaster --admin_email=josephldaigle@yahoo.com --admin_password="password"
