@@ -6,4 +6,4 @@ before_script:
     - composer install --prefer-source --no-interaction
 after_script:
     - sudo mv wp-config.php wp/
-    - /vendor/bin/wp core install --path='wp' --url=http://wptheme-env.gdyysacpvg.us-east-1.elasticbeanstalk.com/ --title="WP Theme" --admin_user=webmaster --admin_email=josephldaigle@yahoo.com --admin_password="password"
+    - vendor/bin/wp core install --path='wp' --url=http://wptheme-env.gdyysacpvg.us-east-1.elasticbeanstalk.com/ --title="WP Theme" --admin_user=webmaster --admin_email=josephldaigle@yahoo.com --admin_password="password"
