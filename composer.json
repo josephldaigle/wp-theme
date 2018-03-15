@@ -1,7 +1,7 @@
 {
     "name": "keibs/wp-theme",
     "description": "A referral swap-selling system for businesses.",
-    "version": "1.0.0-beta",
+    "version": "wp-theme-source-1.0.0.3-beta",
     "type": "wordpress-core",
     "time": "2017-01-21",
     "license": "All Rights Reserved",
