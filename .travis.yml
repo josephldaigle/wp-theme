@@ -4,5 +4,6 @@ php:
 before_script:
     - composer self-update
     - composer install --prefer-source --no-interaction
-after_scripts:
+after_deploy:
     - sudo mv wp-config.php wp/
+    - /vendor/bin/wp core install --path='wp' --url=http://wptheme-env.gdyysacpvg.us-east-1.elasticbeanstalk.com/ --title="WP Theme" --admin_user=webmaster --admin_email=josephldaigle@yahoo.com --admin_password="password"
