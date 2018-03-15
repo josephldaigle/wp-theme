@@ -14,5 +14,3 @@ before_script:
 after_script:
     - sudo mv wp-config.php wp/
     - vendor/bin/wp core install --path='wp' --url=http://localhost --title="WP Theme" --admin_user=webmaster --admin_email=josephldaigle@yahoo.com --admin_password="somethingsecure"
-after_scripts:
-    - sudo mv wp-config.php wp/
