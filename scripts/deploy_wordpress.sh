@@ -1,9 +1,12 @@
 #!/bin/bash
 
-mv wp-config.php wp/
-
-sudo -su ec2-user
-
 if ! $(vendor/bin/wp core is-installed); then
-    vendor/bin/wp core install --path='wp' --url=http://localhost --title="WP Theme" --admin_user=webmaster --admin_email=josephldaigle@yahoo.com --admin_password="password"
+
+    wp core config --dbname={YOUR DATABASE NAME} --dbuser={YOUR DATABASE USERNAME} --dbpass={YOUR DATABASE PASSWORD}
+    wp core install --url={YOUR DOMAIN NAME} --title={THE TITLE OF YOUR SITE} --admin_user={YOUR USER NAME} --admin_password={YOUR PASSWORD} --admin_email={YOUR EMAIL}
+
+    sudo mv wp-config.php wp/
+
+    sudo find wp/ -type d -exec chmod 755 {} \;
+    sudo find wp/ -type f -exec chmod 644 {} \;
 fi

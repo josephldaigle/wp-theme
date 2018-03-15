@@ -1,9 +1,9 @@
 {
     "name": "keibs/wp-theme",
-    "description": "A referral swap-selling system for businesses.",
-    "version": "1.0.0.3-beta",
+    "description": "A basic Wordpress theme deployment.",
+    "version": "1.0.0-beta",
     "type": "wordpress-core",
-    "time": "2017-01-21",
+    "time": "2018-03-15",
     "license": "All Rights Reserved",
     "authors": [
         {
@@ -29,5 +29,10 @@
     },
     "extra": {
         "wordpress-install-dir": "wp"
+    },
+    "installer-paths": {
+        "public/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+        "public/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+        "public/wp-content/themes/{$name}/": ["type:wordpress-theme"]
     }
 }
