@@ -19,6 +19,8 @@ echo 'relocating  wp-config.php...'
 $(sudo mv ${DIR}/wp-config.php .)
 $(sudo mv ${DIR}/.htaccess .)
 
+echo $(ls -al)
+
 ## set wordpress path
 ${DIR}/vendor/bin/wp core is-installed
 
