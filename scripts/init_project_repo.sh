@@ -1,8 +1,6 @@
 #!/bin/bash
 
-sudo -su root
-cd ../wp
-git init
-git add .
-git commit 'initial commit'
-exit
+sudo cd ../wp
+sudo git init
+sudo git add .
+sudo git commit 'initial commit'
