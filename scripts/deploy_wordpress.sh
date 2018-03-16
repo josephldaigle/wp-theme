@@ -16,8 +16,8 @@ cd ../wp
 if ! $(${DIR}/vendor/bin/wp core is-installed); then
 
     ## move the wp-config file
-    sudo mv ${DIR}/wp-config.php .
-    sudo mv ${DIR}/.htaccess .
+    $(sudo mv ${DIR}/wp-config.php .)
+    $(sudo mv ${DIR}/.htaccess .)
 
     ## install WP
     ## vendor/bin/wp core install --url={YOUR DOMAIN NAME} --title={THE TITLE OF YOUR SITE} --admin_user={YOUR USER NAME} --admin_password={YOUR PASSWORD} --admin_email={YOUR EMAIL}
