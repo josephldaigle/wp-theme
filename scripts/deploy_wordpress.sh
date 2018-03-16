@@ -12,12 +12,13 @@ DIR="$(pwd)"
 
 ## move to wp install dir
 cd ../wp
-echo 'moving to wp install dir...'
+echo 'changed pwd to wp install dir'
 
 ## move the wp-config file
-echo 'relocating  wp-config.php...'
 $(sudo mv ${DIR}/wp-config.php .)
 $(sudo mv ${DIR}/.htaccess .)
+echo 'deployed wp-config.php and .htaccess'
 
 ## return to orig working dir
 cd ${DIR}
+echo 'returned to original dir'
