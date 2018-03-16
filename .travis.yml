@@ -6,8 +6,7 @@ services:
 env:
     - RDS_HOSTNAME=localhost RDS_DB_NAME=ebdb RDS_PASSWORD="" RDS_USERNAME=root RDS_PORT=""
 before_install:
-    - mysql -e 'CREATE DATABASE IF NOT EXISTS ebdb;'
-    - mysql -e 'GRANT ALL ON ebdb.* TO `travis`@`localhost`; FLUSH PRIVILEGES;'
+    - bash scripts/deploy_wordpress_db.sh
 before_script:
     - composer self-update
     - composer install --prefer-source --no-interaction
