@@ -23,7 +23,7 @@
 define('DB_NAME', $_SERVER['RDS_DB_NAME']);
 
 /** MySQL database username */
-define('DB_USER', $_SERVER['RDS_USERNAME']);
+define('DB_USER', 'wp_user');
 
 /** MySQL database password */
 define('DB_PASSWORD', $_SERVER['RDS_PASSWORD']);
@@ -47,12 +47,14 @@ define('DB_COLLATE', '');
  * @since 2.6.0
  */
 
-
-$keys = explode(PHP_EOL, file_get_contents('https://api.wordpress.org/secret-key/1.1/salt/'));
-foreach ($keys as $key) {
-    // DANGER!
-    eval($key);
+if (! defined('AUTH_KEY')) {
+    $keys = explode(PHP_EOL, file_get_contents('https://api.wordpress.org/secret-key/1.1/salt/'));
+    foreach ($keys as $key) {
+        // DANGER!
+        eval($key);
+    }
 }
+
 
 
 //define('AUTH_KEY',         $_SERVER['WP_AUTH_KEY']);
