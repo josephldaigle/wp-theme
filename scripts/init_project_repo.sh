@@ -17,8 +17,8 @@ if [ "$inside_git_repo" ]; then
     # pull master branch
 else
     sudo git init
-    sudo git config --local user.name $CLIENT_NAME
-    sudo git config --local user.email $CLIENT_EMAIL
+    sudo git config --local user.name "${CLIENT_NAME}"
+    sudo git config --local user.email "${CLIENT_EMAIL}"
 
     sudo git add .
     sudo git commit -m 'initial commit'
