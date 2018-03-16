@@ -15,13 +15,14 @@ cd ../wp
 echo 'moving to wp install dir...'
 
 ## move the wp-config file
-echo 'relocating  wp-config.php'
+echo 'relocating  wp-config.php...'
 $(sudo mv ${DIR}/wp-config.php .)
 $(sudo mv ${DIR}/.htaccess .)
 
 
 ## try install wordpress
 if ! $(${DIR}/vendor/bin/wp core is-installed); then
+    echo 'installing wordpress...'
 
     ## install WP
     ## vendor/bin/wp core install --url={YOUR DOMAIN NAME} --title={THE TITLE OF YOUR SITE} --admin_user={YOUR USER NAME} --admin_password={YOUR PASSWORD} --admin_email={YOUR EMAIL}
