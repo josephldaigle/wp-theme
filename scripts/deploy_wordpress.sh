@@ -11,11 +11,13 @@
 DIR="$(pwd)"
 
 cd ../wp
+echo 'moving to wp install dir...'
 
 ## try install wordpress
 if ! $(${DIR}/vendor/bin/wp core is-installed); then
 
     ## move the wp-config file
+    echo 'relocating  wp-config.php'
     $(sudo mv ${DIR}/wp-config.php .)
     $(sudo mv ${DIR}/.htaccess .)
 
