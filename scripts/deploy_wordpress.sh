@@ -22,3 +22,4 @@ echo 'deployed wp-config.php and .htaccess'
 ## return to orig working dir
 cd ${DIR}
 echo 'returned to original dir'
+echo "$(pwd)"
