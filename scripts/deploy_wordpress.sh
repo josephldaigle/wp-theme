@@ -19,9 +19,11 @@ echo 'relocating  wp-config.php...'
 $(sudo mv ${DIR}/wp-config.php .)
 $(sudo mv ${DIR}/.htaccess .)
 
+## set wordpress path
+${DIR}/vendor/bin/wp core is-installed
 
 ## try install wordpress
-if ! $(${DIR}/vendor/bin/wp core is-installed); then
+if ! $(${DIR}/vendor/bin/wp core is-installed .); then
     echo 'installing wordpress...'
 
     ## install WP
