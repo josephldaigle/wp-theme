@@ -39,3 +39,5 @@ fi
 
 ## return to orig working dir
 cd ${DIR}
+
+echo "$(pwd)"
