@@ -29,6 +29,7 @@
         "johnpbloch/wordpress": "^4.2",
         "wp-cli/wp-cli": "~0.22",
         "symfony/var-dumper": "~4.0",
+        "wpackagist-theme/understrap": "~0.2.9",
         "wpackagist-plugin/wordpress-seo": "~2.1"
     },
     "require-dev": {
@@ -38,8 +39,8 @@
         "wordpress-install-dir": "../wp"
     },
     "installer-paths": {
-        "../wp/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
-        "../wp/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
-        "../wp/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+        "wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+        "wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+        "wp-content/themes/{$name}/": ["type:wordpress-theme"]
     }
 }
