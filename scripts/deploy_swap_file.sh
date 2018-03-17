@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#########################
+# Deploy swap file
+#########################
+#
+# Creates a swap file on the host, if one does not exist.
+# https://wiki.archlinux.org/index.php/swap
+#
+
+
+sudo dd if=/dev/zero of=/swapspace bs=1M count=4000
+
+sudo mkswap /swapspace
+sudo swapon /swapspace
+
+echo 'swap file created'
