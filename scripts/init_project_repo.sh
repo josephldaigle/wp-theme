@@ -13,8 +13,8 @@ cd ../wp
 inside_git_repo="$(git rev-parse --is-inside-work-tree 2>/dev/null)"
 
 # configure project
-sudo git config --global user.name "${GIT_NAME}"
-sudo git config --global user.email "${GIT_EMAIL}"
+sudo git config user.name "${GIT_NAME}"
+sudo git config user.email "${GIT_EMAIL}"
 echo 'git config complete'
 
 if [ "$inside_git_repo" ]; then
