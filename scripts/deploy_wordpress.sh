@@ -7,7 +7,7 @@
 # Script does not run if WP is already installed.
 #
 
-if ! $(${DIR}/vendor/bin/wp core is-installed .);
+if [ ! $(${DIR}/vendor/bin/wp core is-installed.) ];
 then
     ## record working dir
     DIR="$(pwd)"
