@@ -16,8 +16,8 @@ if [ "$inside_git_repo" ]; then
     echo 'inside git repo'
 
     # configure project
-    sudo git config --local user.name "${GIT_NAME}"
-    sudo git config --local user.email "${GIT_EMAIL}"
+    sudo git config --global user.name "${GIT_NAME}"
+    sudo git config --global user.email "${GIT_EMAIL}"
     echo 'git config complete'
 
     # pull master branch
@@ -28,8 +28,8 @@ else
     echo 'git initialized'
 
     # configure project
-    sudo git config --local user.name "${GIT_NAME}"
-    sudo git config --local user.email "${GIT_EMAIL}"
+    sudo git config --global user.name "${GIT_NAME}"
+    sudo git config --global user.email "${GIT_EMAIL}"
     echo 'git config complete'
 
     # execute initial commit
