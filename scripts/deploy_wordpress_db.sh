@@ -9,7 +9,7 @@
 
 # prod
 
-echo 'execute db deploy'
+echo 'deploying wordpress database'
 
 #mysql -h${RDS_HOSTNAME} -P${RDS_PORT} -u${RDS_USERNAME} -p${RDS_PASSWORD} -e"CREATE DATABASE IF NOT EXISTS ebdb; GRANT ALL ON ebdb.* TO wp_user IDENTIFIED BY '${RDS_PASSWORD}'; FLUSH PRIVILEGES;" ${RDS_DB_NAME}
 
