@@ -8,6 +8,8 @@
 # https://wiki.archlinux.org/index.php/swap
 #
 
+echo 'checking swap file...'
+
 if ! free | awk '/^Swap:/ {exit !$2}';
 then
 
