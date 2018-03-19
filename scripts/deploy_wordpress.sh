@@ -9,8 +9,8 @@
 
 ## record working dir
 DIR="$(pwd)"
-echo 'directory changed'
-if ! $(${DIR}/vendor/bin/wp core is-installed);
+
+if ! "$(${DIR}/vendor/bin/wp core is-installed)";
 then
 
     ## move to wp install dir
