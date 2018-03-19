@@ -1,21 +1,29 @@
 #!/bin/bash
 
 #########################
-# WP Install Script
+# WP Deploy Script
 #########################
 #
 # Script does not run if WP is already installed.
 #
 
-if ! $(vendor/bin/wp core is-installed); then
+## record working dir
+DIR="$(pwd)"
+
+if ! $(${DIR}/vendor/bin/wp core is-installed);
+then
+
+    ## move to wp install dir
+    cd ../wp
+    echo 'changed pwd to wp install dir'
 
     ## move the wp-config file
-    sudo mv wp-config.php ../wp/
+    $(sudo mv ${DIR}/wp-config.php .)
+    $(sudo mv ${DIR}/.htaccess .)
+    echo 'deployed wp-config.php and .htaccess'
 
-    ## install WP
-    ## vendor/bin/wp core install --url={YOUR DOMAIN NAME} --title={THE TITLE OF YOUR SITE} --admin_user={YOUR USER NAME} --admin_password={YOUR PASSWORD} --admin_email={YOUR EMAIL}
-
-    ## set WP file permissions
-    sudo find ../wp/ -type d -exec chmod 755 {} \;
-    sudo find ../wp/ -type f -exec chmod 644 {} \;
+    ## return to orig working dir
+    cd ${DIR}
+    echo 'returned to original dir'
+    echo "$(pwd)"
 fi
