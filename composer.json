@@ -1,16 +1,11 @@
 {
-    "name": "keibs/wp-theme",
+    "name": "josephldaigle/wp-theme",
     "description": "A basic Wordpress theme deployment.",
     "version": "1.0.0-beta",
     "type": "wordpress-core",
     "time": "2018-03-15",
     "license": "All Rights Reserved",
     "authors": [
-        {
-            "name": "Yacouba Keita",
-            "email": "info@keibs.com",
-            "role": "Developer"
-        },
         {
             "name": "Joe Daigle",
             "email": "josephldaigle@yahoo.com",
