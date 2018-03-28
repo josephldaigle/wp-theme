@@ -25,6 +25,7 @@
         "wp-cli/wp-cli": "~0.22",
         "symfony/var-dumper": "^4.0",
         "wpackagist-theme/understrap": "^0.8",
+        "roots/sage": "~9.0.0",
         "wpackagist-plugin/wordpress-seo": "^7.0"
     },
     "require-dev": {
