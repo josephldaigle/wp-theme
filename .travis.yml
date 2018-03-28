@@ -11,4 +11,4 @@ before_script:
     - composer self-update
     - composer install --prefer-source --no-interaction
 after_script:
-    - bash scripts/init_project_repo.sh
+    - bash scripts/init_git_project.sh
