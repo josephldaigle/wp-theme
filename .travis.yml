@@ -4,7 +4,13 @@ php:
 services:
     - mysql
 env:
-    - RDS_HOSTNAME=localhost RDS_DB_NAME=ebdb RDS_PASSWORD="" RDS_USERNAME=root RDS_PORT=""
+    - RDS_HOSTNAME=localhost
+    - RDS_DB_NAME=ebdb
+    - RDS_PASSWORD=""
+    - RDS_USERNAME=root
+    - RDS_PORT=""
+    - GIT_NAME="Joe Daigle"
+    - GIT_EMAIL="josephldaigle@yahoo.com"
 before_install:
     - bash scripts/deploy_wordpress_db.sh
 before_script:
