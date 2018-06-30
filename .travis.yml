@@ -4,15 +4,11 @@ php:
 services:
     - mysql
 env:
-    - RDS_HOSTNAME=localhost RDS_DB_NAME=ebdb RDS_PASSWORD="" RDS_USERNAME=root RDS_PORT=""
+    - RDS_HOSTNAME=localhost RDS_DB_NAME=ebdb RDS_PASSWORD="" RDS_USERNAME=root RDS_PORT="" GIT_NAME="Joe Daigle" GIT_EMAIL="josephldaigle@yahoo.com"
 before_install:
-    - mysql -e 'CREATE DATABASE IF NOT EXISTS ebdb;'
-    - mysql -e 'GRANT ALL ON ebdb.* TO `travis`@`localhost`; FLUSH PRIVILEGES;'
+    - bash scripts/deploy_wordpress_db.sh
 before_script:
     - composer self-update
     - composer install --prefer-source --no-interaction
 after_script:
-    - sudo mv wp-config.php wp/
-    - vendor/bin/wp core install --path='wp' --url=http://localhost --title="WP Theme" --admin_user=webmaster --admin_email=josephldaigle@yahoo.com --admin_password="somethingsecure"
-after_scripts:
-    - sudo mv wp-config.php wp/
+    - bash scripts/init_git_project.sh
