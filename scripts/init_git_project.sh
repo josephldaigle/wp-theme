@@ -23,6 +23,7 @@ if [ "$inside_git_repo" ]; then
 
     # pull master branch
 
+
 else
     #init git project
     sudo git init
