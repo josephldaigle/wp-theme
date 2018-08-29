@@ -15,21 +15,14 @@
         <!--<var name="TEST_PASSWORD" value="testUser123!!" />-->
     </php>
 
-    <!--<testsuites>-->
-        <!--<testsuite name="all">-->
-            <!--<directory>tests/</directory>-->
-        <!--</testsuite>-->
+    <testsuites>
+        <testsuite name="all">
+            <directory>tests/</directory>
+        </testsuite>
         <!--<testsuite name="regressController">-->
             <!--<directory>tests/Unit/Controller</directory>-->
         <!--</testsuite>-->
-        <!--<testsuite name="regressDataLayer">-->
-            <!--<directory>tests/Unit/Data</directory>-->
-            <!--<directory>tests/Functional/Data</directory>-->
-        <!--</testsuite>-->
-        <!--<testsuite name="regressEntity">-->
-            <!--<directory>tests/Unit/Entity</directory>-->
-        <!--</testsuite>-->
-    <!--</testsuites>-->
+    </testsuites>
 
     <!-- Below is the connection configuration for tests that interact with the database. -->
     <!--<php>-->

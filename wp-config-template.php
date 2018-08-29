@@ -23,7 +23,7 @@
 define('DB_NAME', $_SERVER['RDS_DB_NAME']);
 
 /** MySQL database username */
-define('DB_USER', 'wp_user');
+define('DB_USER', $_SERVER['RDS_USER']);
 
 /** MySQL database password */
 define('DB_PASSWORD', $_SERVER['RDS_PASSWORD']);
@@ -46,14 +46,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'zEj24w[[6NI&1h=I361[gcXS2zd+)Dmc6vb7Z/d4F}Tjg)63e0:v1_5--Kt.>get');
-define('SECURE_AUTH_KEY',  'rx$CAk8ss%MArto z2kkfL.]tk*^Ehs{eG#S#ORVkw~mPqo%suH&IQ7%_.=ZPGIu');
-define('LOGGED_IN_KEY',    'd4KLWOdY6igu0cTvlUfEA+66Q}$93Q5>Rij+IFOx]0`d-_XexgzNF{pN}6|k!*mV');
-define('NONCE_KEY',        'd*S/Z*?g^$s|iSeyJ/-u,Pax>BQfF0eI(cX-!xe;H2GLt|{U.ME38X78^/)bJKUS');
-define('AUTH_SALT',        'm.H%yD-B!_Y|.P/T-cPVD~#U2-f8^YHgJmQRKzIEt~pTdmaMf}o}#24fUdG0P@lt');
-define('SECURE_AUTH_SALT', '?&5c7Rz8:M0+xA0!NFlgT8!|8ck/tM4{NYFUx4tu%5N>m^:JD*Aad|`[.:.pid2l');
-define('LOGGED_IN_SALT',   'd[hjVZ/-AgeetOD:IY_QwO[@-K<|R Brcs>PTt`~hU+ur-^=%XaeTr7X/CUV4rmc');
-define('NONCE_SALT',       '3YiM=?Y{7L]:0Md33r,>f9t4%H}1]v y=LL[ZC+]|1]w;FYIHH1e==dfCkyyt-x%');
+//define('AUTH_KEY',         'zEj24w[[6NI&1h=I361[gcXS2zd+)Dmc6vb7Z/d4F}Tjg)63e0:v1_5--Kt.>get');
+//define('SECURE_AUTH_KEY',  'rx$CAk8ss%MArto z2kkfL.]tk*^Ehs{eG#S#ORVkw~mPqo%suH&IQ7%_.=ZPGIu');
+//define('LOGGED_IN_KEY',    'd4KLWOdY6igu0cTvlUfEA+66Q}$93Q5>Rij+IFOx]0`d-_XexgzNF{pN}6|k!*mV');
+//define('NONCE_KEY',        'd*S/Z*?g^$s|iSeyJ/-u,Pax>BQfF0eI(cX-!xe;H2GLt|{U.ME38X78^/)bJKUS');
+//define('AUTH_SALT',        'm.H%yD-B!_Y|.P/T-cPVD~#U2-f8^YHgJmQRKzIEt~pTdmaMf}o}#24fUdG0P@lt');
+//define('SECURE_AUTH_SALT', '?&5c7Rz8:M0+xA0!NFlgT8!|8ck/tM4{NYFUx4tu%5N>m^:JD*Aad|`[.:.pid2l');
+//define('LOGGED_IN_SALT',   'd[hjVZ/-AgeetOD:IY_QwO[@-K<|R Brcs>PTt`~hU+ur-^=%XaeTr7X/CUV4rmc');
+//define('NONCE_SALT',       '3YiM=?Y{7L]:0Md33r,>f9t4%H}1]v y=LL[ZC+]|1]w;FYIHH1e==dfCkyyt-x%');
 
 
 /**

@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+<?php
+/**
+ * Created by Joseph Daigle.
+ * Date: 7/20/18
+ * Time: 11:40 PM
+ */
+
+
+/**
+ * This file enables running commands from the console. To execute a registered command, call it by name:
+ *      $  php bin/console wordpress:configure
+ */
+
+require __DIR__ . '/../vendor/autoload.php';
+
+$application = new \Symfony\Component\Console\Application();
+$application->add();
+$application->run();

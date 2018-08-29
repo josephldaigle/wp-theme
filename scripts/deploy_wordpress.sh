@@ -18,8 +18,8 @@ then
     echo 'changed pwd to wp install dir'
 
     ## move the wp-config file
-    $(sudo mv ${DIR}/wp-config.php .)
-    $(sudo mv ${DIR}/.htaccess .)
+    $(sudo cp ${DIR}/wp-config-template.php ./wp-config.php)
+    $(sudo mv ${DIR}/.htaccess-template ./.htaccess)
     echo 'deployed wp-config.php and .htaccess'
 
     ## return to orig working dir
